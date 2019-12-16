@@ -21,7 +21,7 @@ ggplot( data = nuclear_explosions %>%
         aes(x = year, y = count)
 ) +
   geom_line() +
-  labs(title = 'Number of Nuclear Bombs\n detonated with year',
+  labs(title = 'Number of Nuclear Bombs detonated with year',
        caption = 'source:tidytuesday') +
   theme_wsj()
 

@@ -30,8 +30,8 @@ video_games %>%
   mutate(year = as.factor(year(release_date2))) -> price_data
 
 library(ggridges)
-ggplot(price_data, aes(y = as.factor(year), x = price, group = year, height = ..density..)) +
-  geom_density_ridges(aes(fill = year), stat= 'density', trim = TRUE) +
+ggplot(price_data, aes(y = as.factor(year), x = price)) +
+  geom_density_ridges(aes(fill = year)) +
   theme(legend.position = 'none') +
   labs(title = 'Price of games over the years', y = 'Year', x = 'Price')
 ggsave('./plots/price_year.jpeg')
